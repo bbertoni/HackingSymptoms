@@ -21,7 +21,10 @@ def scarp_wikipages(urls_list):
         for i in wiki.select('p'):
             para = para + i.getText()
 
-        urls_list['Text'] = para
+        if para == 'Other reasons this message may be displayed:':
+            urls_list['Text'] = "Data not available"
+        else
+            urls_list['Text'] = para
     finally:
         return urls_list
 
