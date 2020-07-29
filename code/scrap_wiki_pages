@@ -55,8 +55,6 @@ if __name__ == '__main__':
     manager = multiprocessing.Manager()
     listManager = manager.list()
     pool = multiprocessing.Pool(workers)
-    
-    print(rows)
 
     try:
         complete_result = pool.map(scarp_wikipages, rows)
