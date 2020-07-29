@@ -64,4 +64,4 @@ if __name__ == '__main__':
         for row in complete_result:
             urls_list = urls_list.append(row, ignore_index=True)
             
-        urls_list.to_csv("/Users/akanshakamboj/Downloads/wikipage.csv")
+        urls_list.to_csv("wikipage.csv")
