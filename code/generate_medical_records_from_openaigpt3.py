@@ -49,8 +49,9 @@ def generate_text_summary(text):
 def main():
     openai.api_key = "insert_api_key_here"
 
-    data_files = ['OMIM_shortlist_1.csv', 'OMIM_shortlist_2.csv', 'OMIM_shortlist_3.csv']
-    result_files = ['GPT3_medical_records_1.csv', 'GPT3_medical_records_2.csv', 'GPT3_medical_records_3.csv']
+    # To split into multiple files, add each individual file name in the list below and similarly for each result file.
+    data_files = ['resources/OMIM_shortlist.csv']
+    result_files = ['resources/GPT3_medical_records.csv']
 
     for shard_id in range(3):
         print('Reading diseases from file:', data_files[shard_id])
